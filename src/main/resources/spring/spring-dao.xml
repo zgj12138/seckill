@@ -43,4 +43,9 @@
         <!--给出扫描Dao接口包-->
         <property name="basePackage" value="edu.gduf.seckill.dao"/>
     </bean>
+    <!--注入RedisDao-->
+    <bean id="redisDao" class="edu.gduf.seckill.dao.cache.RedisDao">
+        <constructor-arg index="0" value="119.29.78.93"/>
+        <constructor-arg index="1" value="6379"/>
+    </bean>
 </beans>
