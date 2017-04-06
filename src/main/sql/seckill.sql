@@ -14,7 +14,7 @@ CREATE PROCEDURE `seckill`.`exeute_seckill`
     (seckill_id,user_phone,create_time) VALUES
       (v_seckillId,v_phone,v_kill_time);
     SELECT row_count() INTO insert_count;
-    IF (insert_count < 0) THEN
+    IF (insert_count = 0) THEN
       ROLLBACK ;
       set r_result = -1;
       ELSEIF (insert_count < 0) THEN
